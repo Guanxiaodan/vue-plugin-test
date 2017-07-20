@@ -4,9 +4,12 @@ import Vue from 'vue'
 import VeLine from 'v-charts/lib/line'
 import App from './App'
 import router from './router'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
 Vue.component(VeLine.name, VeLine)
+Vue.use(iView)
 
 /* eslint-disable no-new */
 new Vue({

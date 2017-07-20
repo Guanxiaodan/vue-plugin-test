@@ -9,8 +9,8 @@
         legend-visible
         :width="width"
         :height="height"
-        :grid="grid"
         :scale="scale"
+        :visualMap="maps"
         :settings="chartSettings">
       </ve-line>
     </div>
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+  import 'echarts/lib/component/visualMap'
+
   export default {
     name: 'hello',
     data () {
@@ -25,14 +27,14 @@
     },
     created () {
       this.chartData = {
-        columns: ['日期', '销售额', '占比'],
+        columns: ['日期', '销售额'],
         rows: [
-          { '日期': '1月1日', '销售额': 1523, '占比': 0.12 },
-          { '日期': '1月2日', '销售额': 1223, '占比': 0.345 },
-          { '日期': '1月3日', '销售额': 2123, '占比': 0.7 },
-          { '日期': '1月4日', '销售额': 4123, '占比': 0.31 },
-          { '日期': '1月5日', '销售额': 3123, '占比': 0.12 },
-          { '日期': '1月6日', '销售额': 7123, '占比': 0.65 }
+          { '日期': '1月1日', '销售额': 1523 },
+          { '日期': '1月2日', '销售额': 1223 },
+          { '日期': '1月3日', '销售额': 2123 },
+          { '日期': '1月4日', '销售额': 4123 },
+          { '日期': '1月5日', '销售额': 3123 },
+          { '日期': '1月6日', '销售额': 7123 }
         ]
       }
       this.chartColors = [
@@ -42,16 +44,41 @@
         '#87a997', '#d49ea2', '#5b4947',
         '#7ba3a8'
       ]
-      this.grid = { left: 20, right: 20 }
+//      this.grid = { left: 20, right: 20 }
       this.scale = { y: true }
       this.width = '80%'
       this.height = '350px'
       this.chartSettings = {
-        axisSite: {
-          right: ['占比']
-        },
-        yAxisType: ['KMB', 'percent'],
-        area: true
+        yAxisType: ['KMB'],
+        area: false
+      }
+      this.maps = {
+        top: 10,
+        right: 10,
+        precision: 1,
+        pieces: [{
+          gt: 0,
+          lte: 2000,
+          color: '#096'
+        }, {
+          gt: 2000,
+          lte: 4000,
+          color: '#ffde33'
+        }, {
+          gt: 4000,
+          lte: 6000,
+          color: '#ff9933'
+        }, {
+          gt: 6000,
+          lte: 7000,
+          color: '#cc0033'
+        }, {
+          gt: 7000,
+          color: 'yellowgreen'
+        }],
+        outOfRange: {
+          color: '#999'
+        }
       }
     }
   }
