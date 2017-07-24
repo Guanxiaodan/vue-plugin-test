@@ -6,10 +6,12 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+const VueDragula = require('vue-dragula')
 
 Vue.config.productionTip = false
 Vue.component(VeLine.name, VeLine)
 Vue.use(iView)
+Vue.use(VueDragula)
 
 /* eslint-disable no-new */
 new Vue({

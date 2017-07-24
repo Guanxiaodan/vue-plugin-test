@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import chart from '@/pages/vChartsTest'
 import transfer from '@/pages/iviewTransfer'
 import dropdown from '@/pages/iviewDropDown'
+import drag from '@/pages/vueDragula'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/dropdown',
       name: 'dropdown',
       component: dropdown
+    },
+    {
+      path: '/drag',
+      name: 'drag',
+      component: drag
     }
   ]
 })
