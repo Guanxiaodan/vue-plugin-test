@@ -6,10 +6,11 @@
       <draggable v-model="myArray">
         <transition-group>
           <div class="item" v-for="(element, index) in myArray" :key="index">
-            {{element}}
+            {{index}}----{{element}}
           </div>
         </transition-group>
       </draggable>
+      <p>{{myArray}}</p>
     </div>
   </div>
 </template>
