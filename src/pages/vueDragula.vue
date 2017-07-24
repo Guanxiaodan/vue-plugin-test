@@ -1,13 +1,12 @@
 <template>
   <div>
     <h1>vueDragula测试</h1>
+    <div>不算成功
+      <a href="https://github.com/Astray-git/vue-dragula">https://github.com/Astray-git/vue-dragula</a>
+    </div>
     <div class="wrapper">
-      <div class="container" v-dragula="colOne" bag="first-bag">
-        <!-- with click -->
-        <div class="item" v-for="text in colOne">{{text}}</div>
-      </div>
-      <div class="container" v-dragula="colTwo" bag="first-bag">
-        <div v-for="text in colTwo">{{text}}</div>
+      <div class="container" v-dragula="colOne" bag="first-bag" >
+        <div class="item" v-for="(text, index) in colOne" :key="index">{{index}}---{{text}}</div>
       </div>
     </div>
   </div>
@@ -18,14 +17,10 @@
     name: 'hello',
     data () {
       return {
-        colOne: [11.44, 'shseoihabi', 'osidhfahepigaw'],
-        colTwo: [8379, '啊数额分别', '埃尔文回复']
+        colOne: [11.44, 'shseoihabi', 'osidhfahepigaw']
       }
     },
     created () {
-      this.vueDragula.options('my-bag', {
-        direction: 'vertical'
-      })
     }
   }
 </script>
@@ -49,10 +44,12 @@
   a {
     color: #42b983;
   }
+  .item {
+    font-size: 20px;
+    background: pink;
+    width: 20rem;
+    border: 1px solid;
+    border-radius: 3rem;
+  }
 
-  /*.item {*/
-    /*border:1px solid #eee;*/
-    /*margin-bottom: 5px;*/
-    /*font-size: 20px;*/
-  /*}*/
 </style>
