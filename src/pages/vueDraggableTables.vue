@@ -12,7 +12,7 @@
           <th>籍贯</th>
         </tr>
         </thead>
-        <draggable v-model="people" :element="'tbody'">
+        <draggable v-model="people" :element="'tbody'" @end="removes">
           <tr class="item" v-for="(person, index) in people" :key="index">
             <td>{{index}}</td>
             <td>{{person.name}}</td>
@@ -39,6 +39,11 @@
           {home: '运城', name: 'Courtenay'},
           {home: '北京', name: 'David'}
         ]
+      }
+    },
+    methods: {
+      removes (item) {
+        console.log('看看触发事件了没', item)
       }
     },
     created () {
@@ -68,12 +73,17 @@
   a {
     color: #42b983;
   }
+
   .item {
     font-size: 20px;
     background: #6ae9ff;
     width: 20rem;
     border: 1px solid;
     border-radius: 3rem;
+  }
+
+  .item:hover {
+    cursor: pointer;
   }
 
 
