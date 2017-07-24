@@ -5,6 +5,7 @@ import chart from '@/pages/vChartsTest'
 import transfer from '@/pages/iviewTransfer'
 import dropdown from '@/pages/iviewDropDown'
 import drag from '@/pages/vueDragula'
+import draggable from '@/pages/vueDraggable'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/drag',
       name: 'drag',
       component: drag
+    },
+    {
+      path: '/draggable',
+      name: 'draggable',
+      component: draggable
     }
   ]
 })
