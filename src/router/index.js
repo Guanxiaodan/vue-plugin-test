@@ -7,6 +7,7 @@ import dropdown from '@/pages/iviewDropDown'
 import drag from '@/pages/vueDragula'
 import draggable from '@/pages/vueDraggable'
 import vueDraggableTables from '@/pages/vueDraggableTables'
+import vueDraggableResizableTry from '@/pages/vueDraggableResizableTry'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/draggable',
       name: 'draggable',
       component: draggable
+    },
+    {
+      path: '/dragdiv',
+      name: 'dragdiv',
+      component: vueDraggableResizableTry
     },
     {
       path: '/vueDraggableTables',

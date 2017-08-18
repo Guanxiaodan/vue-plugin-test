@@ -6,10 +6,13 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import VueDraggableResizable from 'vue-draggable-resizable'
+
 const VueDragula = require('vue-dragula')
 
 Vue.config.productionTip = false
 Vue.component(VeLine.name, VeLine)
+Vue.component('vue-draggable-resizable', VueDraggableResizable)
 Vue.use(iView)
 Vue.use(VueDragula)
 
