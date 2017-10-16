@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import draggable from 'vuedraggable'
+  import draggable from 'src/pages/vueDrag/vueDraggable'
 
   export default {
     name: 'hello',
