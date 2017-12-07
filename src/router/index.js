@@ -4,6 +4,8 @@ import Hello from '@/components/Hello'
 import chart from '@/pages/vCharts/vChartsTest'
 import transfer from '@/pages/iview/iviewTransfer'
 import tabs from '@/pages/iview/iviewTabs'
+import self from '@/pages/iview/self'
+import upload from '@/pages/iview/upload'
 import dropdown from '@/pages/iview/iviewDropDown'
 import drag from '@/pages/vueDrag/vueDragula'
 // import draggable from '@/pages/vueDrag/vueDraggable'
@@ -58,6 +60,16 @@ export default new Router({
       path: '/tabs',
       name: 'tabs',
       component: tabs
+    },
+    {
+      path: '/upload',
+      name: 'upload',
+      component: upload
+    },
+    {
+      path: '/self',
+      name: 'self',
+      component: self
     }
   ]
 })
