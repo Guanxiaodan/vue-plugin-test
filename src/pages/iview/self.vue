@@ -2,15 +2,20 @@
   <div class="hello">
     <h1>测试啊啊啊啊</h1>
     <div>
-      <select v-model="model1" style="width:200px">
-        <option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</option>
-      </select>
+      <selectt v-model="model5" disabled style="width:200px">
+        <optionn v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</optionn>
+      </selectt>
+      <selectt v-model="model6" style="width:200px">
+        <optionn value="beijing">New York</optionn>
+        <optionn value="shanghai" disabled>London</optionn>
+        <optionn value="shenzhen">Sydney</optionn>
+      </selectt>
     </div>
   </div>
 </template>
 
 <script>
-  import {select, option} from '../../selsect/index'
+  import {selectt, optionn} from '../../selsect/index'
 
   export default {
     name: 'hello',
@@ -42,11 +47,12 @@
             label: 'Canberra'
           }
         ],
-        model1: ''
+        model5: '',
+        model6: ''
       }
     },
     components: {
-      select, option
+      selectt, optionn
     }
   }
 </script>

@@ -2,7 +2,7 @@
  * Created by GXD on 2017/12/7.
  *
  */
-import { t } from './locale';
+import { t } from '../locale';
 
 export default {
   methods: {
