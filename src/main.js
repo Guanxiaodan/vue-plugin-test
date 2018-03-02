@@ -7,6 +7,8 @@ import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import VueDraggableResizable from 'vue-draggable-resizable'
+// import '../node_modules/swiper/dist/css/swiper.min.css'
+// import 'swiper'
 
 const VueDragula = require('vue-dragula')
 

@@ -8,6 +8,7 @@ import self from '@/pages/iview/self'
 import upload from '@/pages/iview/upload'
 import dropdown from '@/pages/iview/iviewDropDown'
 import drag from '@/pages/vueDrag/vueDragula'
+import swiper from '@/pages/swiper/swiper'
 // import draggable from '@/pages/vueDrag/vueDraggable'
 // import vueDraggableTables from '@/pages/vueDrag/vueDraggableTables'
 // import vueDraggableResizableTry from '@/pages/vueDrag/vueDraggableResizableTry'
@@ -70,6 +71,11 @@ export default new Router({
       path: '/self',
       name: 'self',
       component: self
+    },
+    {
+      path: '/swiper',
+      name: 'swiper',
+      component: swiper
     }
   ]
 })
